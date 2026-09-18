@@ -1,6 +1,6 @@
 {
   "name": "make-grok4.6-think-more-in-pi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Experimental requirement-tracking and evidence-checking prompt policy for Grok 4.6 xhigh in Pi.",
   "type": "module",
   "license": "MIT",
@@ -13,12 +13,12 @@
   "bugs": "https://github.com/hellopahe/make-grok4.6-think-more-in-pi/issues",
   "keywords": ["pi-package", "pi-extension", "grok", "prompt-policy"],
   "engines": { "node": ">=24" },
-  "files": ["extension.ts", "src", "README.md", "README.zh-CN.md", "LICENSE"],
+  "files": ["extension.ts", "README.md", "README.zh-CN.md", "LICENSE"],
   "pi": { "extensions": ["./extension.ts"] },
   "scripts": {
-    "test": "node --test --test-timeout=20000 test/*.test.mjs",
+    "test": "node test/integration.mjs",
     "test:integration": "node test/integration.mjs",
-    "check": "npm test && npm run test:integration"
+    "check": "npm test"
   },
   "peerDependencies": { "@earendil-works/pi-coding-agent": "*" },
   "devDependencies": {
